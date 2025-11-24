@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Play Store Clone</string>
+    <string name="for_you">For you</string>
+    <string name="top_charts">Top charts</string>
+    <string name="other_devices">Other devices</string>
+    <string name="kids">Kids</string>
+    <string name="premium">Premium</string>
+    <string name="categories">Categories</string>
+
+    <string name="games">Games</string>
+    <string name="apps">Apps</string>
+    <string name="search">Search</string>
+    <string name="books">Books</string>
+</resources>
