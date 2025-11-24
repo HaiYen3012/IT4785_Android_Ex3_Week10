@@ -34,7 +34,10 @@ class MainActivity : AppCompatActivity() {
                 apps = listOf(
                     AppItem("Mech Assemble: Zombie Swarm", "Action", 4.8f, "624 MB", "https://play-lh.googleusercontent.com/2anpQdZ2VZMk6isYItVsHLCGPvogdBKk4tKZ1LVysz6TeY1EpLgGjkYLGcRdzbdCOZhehBRDDJU-OMwjDErZ"),
                     AppItem("MU: Hồng Hoả Đao", "Role Playing", 4.8f, "339 MB", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWoKxW2Al7FtZcgxc7AzqdUBhF2ioNcO5gxg&s"),
-                    AppItem("War Inc: Rising", "Strategy", 4.9f, "231 MB", "https://play-lh.googleusercontent.com/TlTT0BS4ndcYvLhxDEuXUci6QDbASrL52sC9VusupxrGqXcwe89uUV6hspns3EWaEQ")
+                    AppItem("War Inc: Rising", "Strategy", 4.9f, "231 MB", "https://play-lh.googleusercontent.com/TlTT0BS4ndcYvLhxDEuXUci6QDbASrL52sC9VusupxrGqXcwe89uUV6hspns3EWaEQ"),
+                    AppItem("Asphalt 9: Legends", "Racing", 4.6f, "2.5 GB", "https://static.wikia.nocookie.net/asphalt/images/e/ef/A9_v1.5_icon.png/revision/latest?cb=20190410200039"),
+                    AppItem("Call of Duty Mobile", "Action", 4.4f, "3.1 GB", "https://upload.wikimedia.org/wikipedia/vi/0/07/CODM_logo.png"),
+                    AppItem("Genshin Impact", "Adventure", 4.5f, "18 GB", "https://static.wikia.nocookie.net/logopedia/images/4/4f/Yuanshen_Icon.png/revision/latest/scale-to-width-down/250?cb=20241230080300")
                 )
             ),
 

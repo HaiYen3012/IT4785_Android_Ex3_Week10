@@ -18,16 +18,21 @@ class MainSectionAdapter(
             binding.sectionTitleText.text = section.title
 
             when (section.viewType) {
-                // Section dọc (Suggested for you)
+                // Section dọc nhóm 3 (Suggested for you) - CUỘN NGANG THEO NHÓM
                 SectionType.VERTICAL_GROUP -> {
-                    binding.sectionAppsRecycler.layoutManager = LinearLayoutManager(itemView.context)
-                    binding.sectionAppsRecycler.adapter = VerticalAppAdapter(section.apps)
+                    // Chia apps thành các nhóm 3
+                    val groups = section.apps.chunked(3)
 
-                    // Với section dọc, không cần mũi tên chuyển tiếp ở cuối
+                    binding.sectionAppsRecycler.layoutManager = LinearLayoutManager(
+                        itemView.context,
+                        LinearLayoutManager.HORIZONTAL,
+                        false
+                    )
+                    binding.sectionAppsRecycler.adapter = GroupThreeAdapter(groups)
+
                     binding.sectionArrowButton.visibility = View.GONE
-
-                    // Icon 3 chấm luôn hiển thị theo layout mới
                     binding.sectionMoreIcon.visibility = View.VISIBLE
+                    binding.sectionAppsRecycler.setPadding(8, 0, 8, 0)
                 }
 
                 // Section cuộn ngang (Recommended for you)
@@ -38,14 +43,8 @@ class MainSectionAdapter(
                         false
                     )
                     binding.sectionAppsRecycler.adapter = HorizontalAppAdapter(section.apps)
-
-                    // Với section ngang, hiển thị mũi tên ở cuối
                     binding.sectionArrowButton.visibility = View.VISIBLE
-
-                    // Icon 3 chấm cũng luôn hiển thị
                     binding.sectionMoreIcon.visibility = View.VISIBLE
-
-                    // Thêm padding để item đầu tiên không bị dính sát lề
                     binding.sectionAppsRecycler.setPadding(8, 0, 8, 0)
                 }
             }
